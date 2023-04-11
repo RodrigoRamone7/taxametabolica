@@ -19,4 +19,4 @@ E repositório tem o propósito de praticar meus conhecimentos em python e estar
 - [ ] Interface gráfica
 - [x] Mesclar os dois algoritmos em um só Script
 - [x] Aprimorar para que exiba os resultados de atividade física sem necessidade de coletar esta informação
-- [ ] Converter os valores em números inteiros
+- [ ] Formatar números dos resultados
