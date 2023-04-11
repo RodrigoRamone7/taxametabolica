@@ -8,9 +8,8 @@ Este algoritmo tem a intensão de auxiliar no cálculo de taxa metabólica basal
 ### Utilização
 
 Existem dois algoritmos separados para calcular taxa metabólica de homens ou de mulheres.
-* O arquivo `algitmotaxametabolica.py` representa o cálculo para homens
-* O arquivo `algitmotaxametabolicafem.py` representa o cálculo para mulheres
-   * Os algoritmos contem instruções de uso ao serem executados
+* O algorítmo se encontra no arquivo `taxabelatobilica.py`
+   * O algoritmo contém instruções de uso ao ser executado
 
 ---
 
@@ -18,6 +17,6 @@ Existem dois algoritmos separados para calcular taxa metabólica de homens ou de
 E repositório tem o propósito de praticar meus conhecimentos em python e estarei atualizando conforme meu conhecimento se torna mais robusto.
 ### To-Do
 - [ ] Interface gráfica
-- [ ] Mesclar os dois algoritmos em um só Script
-- [ ] Aprimorar para que exiba os resultados de atividade física sem necessidade de coletar esta informação
-- [ ] Converter os valores em números inteiros
+- [x] Mesclar os dois algoritmos em um só Script
+- [x] Aprimorar para que exiba os resultados de atividade física sem necessidade de coletar esta informação
+- [ ] Formatar números dos resultados
