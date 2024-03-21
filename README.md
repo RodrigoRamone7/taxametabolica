@@ -11,6 +11,7 @@ Este algoritmo tem a intensão de auxiliar no cálculo de taxa metabólica basal
 * Sistema Operacional Windows, Mac ou Linux
 * [Java 8 ou JVM superior](https://www.java.com/pt-BR/download/manual.jsp)
 
+#### Tutorial:
 * Abra o aquivo App AppCalculadoraTaxaMetabolica.jar
 * Preencha os campos com os dados correspondentes
 
