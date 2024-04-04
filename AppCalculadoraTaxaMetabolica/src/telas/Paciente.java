@@ -34,42 +34,42 @@ public class Paciente {
         
     }
     
-    public int TaxaMetabHomem(int p,int a,int i){
+    private int TaxaMetabHomem(int p,int a,int i){
         double t = 66 + (13.8 * p) + (5 * a) - (6.8 * i);
         return (int)t;
     }
     
-    public int TaxaMetabMulher(int p,int a,int i) {
+    private int TaxaMetabMulher(int p,int a,int i) {
         double t = 655 + (9.6 * p) + (1.9 * a) - (4.7 * i);
         return (int)t;
     }
     
-    public int TaxaAtivLeveHomem(int taxaMetabolica){
+    private int TaxaAtivLeveHomem(int taxaMetabolica){
         double ativ = taxaMetabolica*1.55;
         return (int)ativ;
     }
     
-    public int TaxaAtivModeradaHomem(int taxaMetabolica){
+    private int TaxaAtivModeradaHomem(int taxaMetabolica){
         double ativ = taxaMetabolica*1.78;
         return (int)ativ;
     }
     
-    public int TaxaAtivIntensaHomem(int taxaMetabolica){
+    private int TaxaAtivIntensaHomem(int taxaMetabolica){
         double ativ = taxaMetabolica*2.10;
         return (int)ativ;
     }
     
-    public int TaxaAtivLeveMulher(int taxaMetabolica){
+    private int TaxaAtivLeveMulher(int taxaMetabolica){
         double ativ = taxaMetabolica*1.56;
         return (int)ativ;
     }
     
-    public int TaxaAtivModeradaMulher(int taxaMetabolica){
+    private int TaxaAtivModeradaMulher(int taxaMetabolica){
         double ativ = taxaMetabolica*1.64;
         return (int)ativ;
     }
     
-    public int TaxaAtivIntensaMulher(int taxaMetabolica){
+    private int TaxaAtivIntensaMulher(int taxaMetabolica){
         double ativ = taxaMetabolica*1.82;
         return (int)ativ;
     }
