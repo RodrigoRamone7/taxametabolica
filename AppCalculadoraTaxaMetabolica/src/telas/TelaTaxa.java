@@ -289,34 +289,17 @@ public class TelaTaxa extends javax.swing.JFrame {
     private void btnCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularActionPerformed
         // TODO add your handling code here:
         painelResultados.setVisible(true);
-        int genero = boxGenero.getSelectedIndex();
-        Paciente p = new Paciente();
-        int peso = Integer.parseInt(spnPeso.getValue().toString());
-        int altura = Integer.parseInt(spnAltura.getValue().toString());
-        int idade = Integer.parseInt(spnIdade.getValue().toString());
-        int taxa, aLeve, aMod, aInte;
+        Paciente paciente = new Paciente();
+        paciente.SetPaciente(
+                Integer.parseInt(spnPeso.getValue().toString()),
+                Integer.parseInt(spnAltura.getValue().toString()),
+                Integer.parseInt(spnIdade.getValue().toString()),
+                boxGenero.getSelectedIndex());
         
-        if (genero == 0){
-            taxa = p.TaxaMetabHomem(peso, altura, idade);
-            lblTaxaMeta.setText(Integer.toString(taxa));
-            
-            aLeve = p.TaxaAtivLeveHomem(taxa);
-            aMod = p.TaxaAtivModeradaHomem(taxa);
-            aInte = p.TaxaAtivIntensaHomem(taxa);
-            lblTaxaLeve.setText(Integer.toString(aLeve));
-            lblTaxaMod.setText(Integer.toString(aMod));
-            lblTaxaInt.setText(Integer.toString(aInte));
-        } else if (genero == 1){
-            taxa = p.TaxaMetabMulher(peso, altura, idade);
-            lblTaxaMeta.setText(Integer.toString(taxa));
-            
-            aLeve = p.TaxaAtivLeveMulher(taxa);
-            aMod = p.TaxaAtivModeradaMulher(taxa);
-            aInte = p.TaxaAtivIntensaMulher(taxa);
-            lblTaxaLeve.setText(Integer.toString(aLeve));
-            lblTaxaMod.setText(Integer.toString(aMod));
-            lblTaxaInt.setText(Integer.toString(aInte));
-        }
+        lblTaxaMeta.setText(Integer.toString(paciente.taxa));
+        lblTaxaLeve.setText(Integer.toString(paciente.atividadeLeve));
+        lblTaxaMod.setText(Integer.toString(paciente.atividadeModerada));
+        lblTaxaInt.setText(Integer.toString(paciente.atividadeIntensa));
     }//GEN-LAST:event_btnCalcularActionPerformed
 
     /**
