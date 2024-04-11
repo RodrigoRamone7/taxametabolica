@@ -289,9 +289,7 @@ public class TelaTaxa extends javax.swing.JFrame {
     private void btnCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularActionPerformed
         // TODO add your handling code here:
         painelResultados.setVisible(true);
-        Paciente paciente = new Paciente();
-        paciente.SetPaciente(
-                Integer.parseInt(spnPeso.getValue().toString()),
+        Paciente paciente = new Paciente(Integer.parseInt(spnPeso.getValue().toString()),
                 Integer.parseInt(spnAltura.getValue().toString()),
                 Integer.parseInt(spnIdade.getValue().toString()),
                 boxGenero.getSelectedIndex());
