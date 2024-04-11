@@ -12,26 +12,22 @@ public class Paciente {
     public int peso, altura, idade, genero, taxa;
     public int atividadeLeve, atividadeModerada, atividadeIntensa;
     
-    public void SetPaciente(int p, int a, int i, int g){
-        peso = p;
-        altura = a;
-        idade = i;
-        genero = g;
+    Paciente(int peso, int altura, int idade, int genero){
+        this.peso = peso;
+        this.altura = altura;
+        this.idade = idade;
+        this.genero = genero;
+        
         switch (genero){
             case 0 :
-                taxa = TaxaMetabHomem(p, a, i);
-                atividadeLeve = TaxaAtivLeveHomem(taxa);
-                atividadeModerada = TaxaAtivModeradaHomem(taxa);
-                atividadeIntensa = TaxaAtivIntensaHomem(taxa);
+                this.taxa = TaxaMetabHomem(peso, altura, idade);
+                setTaxasHomem(this.taxa);
                 break;
             case 1 :
-                taxa = TaxaMetabMulher(p, a, i);
-                atividadeLeve = TaxaAtivLeveMulher(taxa);
-                atividadeModerada = TaxaAtivModeradaMulher(taxa);
-                atividadeIntensa = TaxaAtivIntensaMulher(taxa);
+                this.taxa = TaxaMetabMulher(peso, altura, idade);
+                setTaxasMulher(this.taxa);
                 break;
         }
-        
     }
     
     private int TaxaMetabHomem(int p,int a,int i){
@@ -42,6 +38,20 @@ public class Paciente {
     private int TaxaMetabMulher(int p,int a,int i) {
         double t = 655 + (9.6 * p) + (1.9 * a) - (4.7 * i);
         return (int)t;
+    }
+    
+    private void setTaxasHomem(int taxa){
+        int ativ = taxa;
+        this.atividadeLeve = TaxaAtivLeveHomem(ativ);
+        this.atividadeModerada = TaxaAtivModeradaHomem(ativ);
+        this.atividadeIntensa = TaxaAtivIntensaHomem(ativ);
+    }
+    
+    private void setTaxasMulher(int taxa){
+        int ativ = taxa;
+        this.atividadeLeve = TaxaAtivLeveMulher(ativ);
+        this.atividadeModerada = TaxaAtivModeradaMulher(ativ);
+        this.atividadeIntensa = TaxaAtivIntensaMulher(ativ);
     }
     
     private int TaxaAtivLeveHomem(int taxaMetabolica){
